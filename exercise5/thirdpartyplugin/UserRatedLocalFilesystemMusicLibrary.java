@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.ibm.streams.tutorial.exercise5.musicplayer.Rating;
 import com.ibm.streams.tutorial.exercise5.musicplayer.Song;
 import com.ibm.streams.tutorial.exercise5.musicplayer.StarRating;
 import com.ibm.streams.tutorial.exercise5.musicplayer.UserRatedMusicLibrary;
@@ -42,7 +43,8 @@ public class UserRatedLocalFilesystemMusicLibrary implements UserRatedMusicLibra
     public Collection<Song> allSongs() {
         return allSongs;
     }
-
+    
+   
     @Override
     public int timesPlayed(Song song) {
         // Could read a local database file to find the number of times played

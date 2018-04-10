@@ -28,6 +28,11 @@ public interface MusicLibrary {
      * Default implementation takes a rating by normalising the play count for the given song with the play count for
      * all songs in this MusicLibrary.
      */
+    default List<Song> sortedByArtist() {
+    	
+    	return SongByArtistSorter.sort(allSongs());
+    }
+    
     default Rating ratingOf(Song song) {
         int totalPlayCount = allSongs().stream().mapToInt(this::timesPlayed).sum();
         float score = (timesPlayed(song) / totalPlayCount) * 100.0f;

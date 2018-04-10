@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.ibm.streams.tutorial.exercise5.musicplayer.MusicLibrary;
@@ -21,9 +22,8 @@ public class LocalFilesystemMusicLibrary implements MusicLibrary {
 
     @Override
     public Collection<Song> allSongs() {
-        return SongByArtistSorter.sort(allSongs());
+        return allSongs;
     }
-
     @Override
     public int timesPlayed(Song song) {
         // Could read a local database file to find the number of times played
